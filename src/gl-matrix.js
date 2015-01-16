@@ -116,6 +116,13 @@ vec3.add = function (vec, vec2, dest) {
         vec[2] += vec2[2];
         return vec;
     }
+    
+    if (!dest && vec === dest) {
+        vec[0] += vec2[0];
+        vec[1] += vec2[0];
+        vec[2] += vec2[0];
+        return vec
+    }
 
     dest[0] = vec[0] + vec2[0];
     dest[1] = vec[1] + vec2[1];
